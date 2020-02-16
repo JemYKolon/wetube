@@ -14,6 +14,7 @@ const app = express();
 app.use(helmet());
 app.set("view engine", "pug");
 app.use("/uploads", express.static("uploads"));
+app.use("/static", express.static("static"));
 app.use(cookieparser());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
